@@ -1,0 +1,78 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+#hero {
+  background: #2d2d2d url('hero-image.jpg') no-repeat center center/cover;
+  height: 100vh;
+  text-align: center;
+  color: white;
+}
+
+#hero h1 {
+  font-size: 4em;
+  margin-top: 150px;
+}
+
+#hero p {
+  font-size: 1.5em;
+}
+
+#hero button {
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #333;
+  font-size: 1.2em;
+  border: none;
+  cursor: pointer;
+}
+
+#hero button:hover {
+  background-color: #ff5733;
+  color: #fff;
+}
+
+#about {
+  padding: 50px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
