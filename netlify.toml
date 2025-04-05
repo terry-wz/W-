@@ -1,0 +1,34 @@
+# netlify.toml
+[build]
+  # The directory where Netlify will look for the built files. Change this if you have a build tool (e.g., Gatsby, Hugo, etc.)
+  publish = "/public"  # The folder where your static files live (default is `/public`)
+  
+  # The build command to run before publishing, if you're using a build tool like Gatsby or Hugo.
+  # If you’re deploying a simple static site, you can leave this empty or use `npm run build` for JavaScript frameworks.
+  command = "npm run build"  # For example, if using a build tool (Gatsby, Next.js, etc.)
+  
+  # The directory where your source code lives, if you're using a subfolder for the project.
+  base = "/"  # Default is the root directory, change if your site files are in a subfolder
+
+[[plugins]]
+  package = "@netlify/plugin-sitemap"  # Example plugin for generating a sitemap (optional)
+
+[build.environment]
+  # If you need to set any environment variables for your build process, you can specify them here
+  NODE_ENV = "production"
+  GIT_COMMIT = "${GIT_COMMIT}"
+
+[context.production.environment]
+  # You can specify production-specific environment variables here (e.g., API keys)
+  API_URL = "https://api.example.com"
+  
+[dev]
+  # Optional: If you want to configure a dev server for local testing
+  command = "npm start"  # Set to start your local dev server
+  port = 8888            # The port where your local server runs
+  targetPort = 3000      # The port the dev server should forward to
+
+[[redirects]]
+  from = "/old-page"
+  to = "/new-page"
+  status = 301
